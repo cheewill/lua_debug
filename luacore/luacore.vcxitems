@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{9cbd4ed0-ec16-4929-99d7-bc7cacf229ae}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lapi.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lauxlib.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lcode.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\ldebug.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\ldo.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lfunc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lgc.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\llex.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\llimits.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lmem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lobject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lopcodes.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lparser.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lstate.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lstring.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\ltable.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\ltm.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lua.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\luaconf.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lualib.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lundump.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\include\lzio.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)lvm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)lapi.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lauxlib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lbaselib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lcode.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ldblib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ldebug.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ldo.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ldump.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lfunc.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lgc.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)linit.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)liolib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)llex.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lmathlib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lmem.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)loadlib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lobject.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lopcodes.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)loslib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lparser.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lstate.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lstring.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lstrlib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ltable.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ltablib.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ltm.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lundump.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lvm.c" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)lzio.c" />
+  </ItemGroup>
+</Project>
