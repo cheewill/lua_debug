@@ -204,9 +204,6 @@
     <ClInclude Include="netrc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="newfiles\_newfopen.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="non-ascii.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -554,9 +551,6 @@
     <ClCompile Include="netrc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="newfiles\_newfopen.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="non-ascii.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -572,9 +566,6 @@
     <ClCompile Include="pingpong.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pipeline.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pop3.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -585,9 +576,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="rtsp.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="security.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="select.c">
@@ -621,9 +609,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="splay.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ssh.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="strcase.c">
@@ -707,9 +692,6 @@
     <ClCompile Include="vauth\vauth.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vtls\axtls.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="vtls\cyassl.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -732,9 +714,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="vtls\polarssl.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="vtls\polarssl_threadlock.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="vtls\schannel.c">

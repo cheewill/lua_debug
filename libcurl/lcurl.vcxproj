@@ -18,13 +18,48 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lcurl\l52util.h" />
+    <ClInclude Include="..\lcurl\lceasy.h" />
+    <ClInclude Include="..\lcurl\lcerror.h" />
+    <ClInclude Include="..\lcurl\lcerr_easy.h" />
+    <ClInclude Include="..\lcurl\lcerr_form.h" />
+    <ClInclude Include="..\lcurl\lcerr_multi.h" />
+    <ClInclude Include="..\lcurl\lcerr_share.h" />
+    <ClInclude Include="..\lcurl\lcerr_url.h" />
+    <ClInclude Include="..\lcurl\lcflags.h" />
+    <ClInclude Include="..\lcurl\lchttppost.h" />
+    <ClInclude Include="..\lcurl\lcinfoeasy.h" />
+    <ClInclude Include="..\lcurl\lcmime.h" />
+    <ClInclude Include="..\lcurl\lcmulti.h" />
+    <ClInclude Include="..\lcurl\lcopteasy.h" />
+    <ClInclude Include="..\lcurl\lcoptmulti.h" />
+    <ClInclude Include="..\lcurl\lcoptshare.h" />
+    <ClInclude Include="..\lcurl\lcopturl.h" />
+    <ClInclude Include="..\lcurl\lcshare.h" />
+    <ClInclude Include="..\lcurl\lcurl.h" />
+    <ClInclude Include="..\lcurl\lcurlapi.h" />
+    <ClInclude Include="..\lcurl\lcutils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\lcurl\l52util.c" />
+    <ClCompile Include="..\lcurl\lceasy.c" />
+    <ClCompile Include="..\lcurl\lcerror.c" />
+    <ClCompile Include="..\lcurl\lchttppost.c" />
+    <ClCompile Include="..\lcurl\lcmime.c" />
+    <ClCompile Include="..\lcurl\lcmulti.c" />
+    <ClCompile Include="..\lcurl\lcshare.c" />
+    <ClCompile Include="..\lcurl\lcurl.c" />
+    <ClCompile Include="..\lcurl\lcurlapi.c" />
+    <ClCompile Include="..\lcurl\lcutils.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{C27120F4-319E-4D98-A028-FD17EE34F72B}</ProjectGuid>
-    <RootNamespace>lua_core</RootNamespace>
+    <ProjectGuid>{799C5E96-DD52-4C73-AAC6-7F3A3C2EBBB3}</ProjectGuid>
+    <RootNamespace>lcurl</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>lua51</ProjectName>
+    <ProjectName>lcurl</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -73,25 +108,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>lua51</TargetName>
+    <TargetName>lcurl</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>lua51</TargetName>
+    <TargetName>lcurl</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <TargetName>lua51</TargetName>
+    <TargetName>lcurl</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <TargetName>lua51</TargetName>
+    <TargetName>lcurl</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -99,6 +134,8 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>liblua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -107,7 +144,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -118,13 +155,15 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>liblua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -132,6 +171,8 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>liblua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -140,7 +181,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -151,9 +192,10 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>liblua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <Import Project="..\luacore\luacore.vcxitems" Label="Shared" Condition="Exists('..\luacore\luacore.vcxitems')" />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
