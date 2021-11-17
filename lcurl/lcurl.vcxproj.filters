@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{712f408e-99ea-4e65-8778-285f3655b705}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{98425c86-2dcd-4e4b-bb57-15bf11c07b5c}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{eeb0ad35-3753-415b-ae81-778f5147852d}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="l52util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lceasy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lcerror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lchttppost.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lcmime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lcmulti.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lcshare.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lcurl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lcurlapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lcutils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="l52util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lceasy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcerr_easy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcerr_form.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcerr_multi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcerr_share.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcerr_url.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcerror.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcflags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lchttppost.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcinfoeasy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcmime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcmulti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcopteasy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcoptmulti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcoptshare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcopturl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcshare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcurl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcurlapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lcutils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
