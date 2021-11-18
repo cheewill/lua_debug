@@ -87,10 +87,12 @@
     <ClCompile Include="openldap.c" />
     <ClCompile Include="parsedate.c" />
     <ClCompile Include="pingpong.c" />
+    <ClCompile Include="pipeline.c" />
     <ClCompile Include="pop3.c" />
     <ClCompile Include="progress.c" />
     <ClCompile Include="rand.c" />
     <ClCompile Include="rtsp.c" />
+    <ClCompile Include="security.c" />
     <ClCompile Include="select.c" />
     <ClCompile Include="sendf.c" />
     <ClCompile Include="share.c" />
@@ -102,6 +104,7 @@
     <ClCompile Include="socks_sspi.c" />
     <ClCompile Include="speedcheck.c" />
     <ClCompile Include="splay.c" />
+    <ClCompile Include="ssh.c" />
     <ClCompile Include="strcase.c" />
     <ClCompile Include="strdup.c" />
     <ClCompile Include="strerror.c" />
@@ -129,11 +132,16 @@
     <ClCompile Include="vauth\spnego_gssapi.c" />
     <ClCompile Include="vauth\spnego_sspi.c" />
     <ClCompile Include="vauth\vauth.c" />
+    <ClCompile Include="vtls\axtls.c" />
+    <ClCompile Include="vtls\cyassl.c" />
+    <ClCompile Include="vtls\darwinssl.c" />
     <ClCompile Include="vtls\gskit.c" />
     <ClCompile Include="vtls\gtls.c" />
     <ClCompile Include="vtls\mbedtls.c" />
     <ClCompile Include="vtls\nss.c" />
     <ClCompile Include="vtls\openssl.c" />
+    <ClCompile Include="vtls\polarssl.c" />
+    <ClCompile Include="vtls\polarssl_threadlock.c" />
     <ClCompile Include="vtls\schannel.c" />
     <ClCompile Include="vtls\vtls.c" />
   </ItemGroup>
@@ -242,14 +250,20 @@
     <ClInclude Include="vauth\ntlm.h" />
     <ClInclude Include="vauth\vauth.h" />
     <ClInclude Include="vtls\axtls.h" />
+    <ClInclude Include="vtls\cyassl.h" />
+    <ClInclude Include="vtls\darwinssl.h" />
     <ClInclude Include="vtls\gskit.h" />
     <ClInclude Include="vtls\gtls.h" />
     <ClInclude Include="vtls\mbedtls.h" />
     <ClInclude Include="vtls\nssg.h" />
     <ClInclude Include="vtls\openssl.h" />
+    <ClInclude Include="vtls\polarssl.h" />
     <ClInclude Include="vtls\polarssl_threadlock.h" />
     <ClInclude Include="vtls\schannel.h" />
     <ClInclude Include="vtls\vtls.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libcurl.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -325,7 +339,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>
       </SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;BUILDING_LIBCURL;DEBUGBUILD;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CURL_DISABLE_LDAP;_DEBUG;BUILDING_LIBCURL;DEBUGBUILD;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)include\curl;$(SolutionDir)libcurl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -334,6 +348,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
     </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\curl</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>Ws2_32.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -342,7 +362,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>
       </SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;BUILDING_LIBCURL;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CURL_DISABLE_LDAP;NDEBUG;BUILDING_LIBCURL;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)include\curl;$(SolutionDir)libcurl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -354,13 +374,19 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
     </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\curl</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>Ws2_32.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>
       </SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;BUILDING_LIBCURL;DEBUGBUILD;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CURL_DISABLE_LDAP;_DEBUG;BUILDING_LIBCURL;DEBUGBUILD;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)include\curl;$(SolutionDir)libcurl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -369,6 +395,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
     </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\curl</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>Ws2_32.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -377,7 +409,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>
       </SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;BUILDING_LIBCURL;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CURL_DISABLE_LDAP;NDEBUG;BUILDING_LIBCURL;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)include;$(SolutionDir)include\curl;$(SolutionDir)libcurl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -389,6 +421,12 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
     </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)include\curl</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Lib>
+      <AdditionalDependencies>Ws2_32.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

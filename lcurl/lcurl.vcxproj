@@ -56,7 +56,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{799C5E96-DD52-4C73-AAC6-7F3A3C2EBBB3}</ProjectGuid>
+    <ProjectGuid>{63DC1C3A-6C42-4AE8-9A7F-C971B9E87C22}</ProjectGuid>
     <RootNamespace>lcurl</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>lcurl</ProjectName>
@@ -126,15 +126,15 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CURL_STATICLIB;WIN32;_DEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>liblua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>liblua51.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -144,9 +144,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CURL_STATICLIB;WIN32;NDEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -155,7 +155,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>liblua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>liblua51.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -163,15 +163,15 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CURL_STATICLIB;_DEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>liblua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>liblua51.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -181,9 +181,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
+      <PreprocessorDefinitions>CURL_STATICLIB;NDEBUG;YMAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);lcurl_DECLARE_EXPORT;_CRT_SECURE_NO_WARNINGS;LUA_BUILD_AS_DLL;LUA_LIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -192,7 +192,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>liblua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>liblua51.lib;libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
