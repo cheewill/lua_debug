@@ -163,11 +163,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="api.c" />
-    <ClCompile Include="b64.c" />
     <ClCompile Include="dumper.c" />
     <ClCompile Include="emitter.c" />
     <ClCompile Include="loader.c" />
-    <ClCompile Include="lyaml.c" />
     <ClCompile Include="parser.c" />
     <ClCompile Include="reader.c" />
     <ClCompile Include="scanner.c" />

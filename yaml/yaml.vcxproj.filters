@@ -30,9 +30,6 @@
     <ClCompile Include="api.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="b64.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="dumper.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -40,9 +37,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="loader.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="lyaml.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
