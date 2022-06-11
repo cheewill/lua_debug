@@ -1,0 +1,38 @@
+﻿  lapi.c
+  lauxlib.c
+  lbaselib.c
+  lcode.c
+  ldblib.c
+  ldebug.c
+  ldo.c
+  ldump.c
+  lfunc.c
+  lgc.c
+D:\my_github\lua_debug\luacore\lgc.c(288,56): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+  linit.c
+  liolib.c
+  llex.c
+  lmathlib.c
+  lmem.c
+  loadlib.c
+  lobject.c
+  lopcodes.c
+  loslib.c
+  lparser.c
+  Compiling...
+  lstate.c
+  lstring.c
+  lstrlib.c
+  ltable.c
+D:\my_github\lua_debug\luacore\ltable.c(323,5): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+D:\my_github\lua_debug\luacore\ltable.c(376,5): warning C4334: '<<': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)
+  ltablib.c
+  ltm.c
+  lundump.c
+  lvm.c
+  lzio.c
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 695 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  liblua51.vcxproj -> D:\my_github\lua_debug\x64\Release\liblua51.dll

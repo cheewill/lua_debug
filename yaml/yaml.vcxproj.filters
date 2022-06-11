@@ -39,6 +39,12 @@
     <ClCompile Include="loader.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="lyaml.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="b64.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="yaml_private.h">
