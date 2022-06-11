@@ -10,7 +10,7 @@
 
 #include "lua.h"
 #include "lauxlib.h"
-#include "common.h"
+#include "../common.h"
 
 extern int Lpcre_get_flags (lua_State *L);
 extern int Lpcre_config (lua_State *L);
@@ -75,7 +75,7 @@ static void do_named_subpatterns (lua_State *L, TPcre *ud, const char *text);
 #  define DO_NAMED_SUBPATTERNS do_named_subpatterns
 #endif
 
-#include "algo.h"
+#include "../algo.h"
 
 /* Locations of the 2 permanent tables in the function environment */
 #define INDEX_CHARTABLES_META  1      /* chartables type's metatable */

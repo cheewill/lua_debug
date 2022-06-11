@@ -19,8 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\common.c" />
     <ClCompile Include="lpcre2.c" />
     <ClCompile Include="lpcre2_f.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\algo.h" />
+    <ClInclude Include="..\common.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

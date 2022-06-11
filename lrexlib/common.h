@@ -4,6 +4,8 @@
 #ifndef COMMON_H
 #define COMMON_H
 
+#define VERSION "2.9.1"
+
 #include "lua.h"
 
 #if LUA_VERSION_NUM > 501

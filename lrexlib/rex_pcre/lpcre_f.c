@@ -4,7 +4,7 @@
 #include <pcre.h>
 #include "lua.h"
 #include "lauxlib.h"
-#include "common.h"
+#include "../common.h"
 
 #define VERSION_PCRE (PCRE_MAJOR*100 + PCRE_MINOR)
 
